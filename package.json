@@ -6,8 +6,10 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "captchapng": "0.0.1",
     "config-lite": "^2.1.0",
     "cookie-parser": "~1.4.3",
+    "crypto": "^1.0.1",
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "formidable": "^1.2.1",
