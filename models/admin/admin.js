@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema;
 
-const adminSchema = nwe Schema({
+const adminSchema = new Schema({
     user_name: String,
     password: String,
     id: Number,

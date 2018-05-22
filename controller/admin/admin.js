@@ -199,6 +199,23 @@ class Admin extends AddressComponent {
         }
     }
 
+    async getAdminCount(req, res, next){
+		try{
+			const count = await AdminModel.count()
+			res.send({
+				status: 1,
+				count,
+			})
+		}catch(err){
+			console.log('获取管理员数量失败', err);
+			res.send({
+				status: 0,
+				type: 'ERROR_GET_ADMIN_COUNT',
+				message: '获取管理员数量失败'
+			})
+		}
+	}
+
     async getAdminInfo(req, res, next) {
         const admin_id = req.session.admin_id;
         if(!admin_id || !Number(admin_id)) {
