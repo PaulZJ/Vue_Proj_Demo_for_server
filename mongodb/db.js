@@ -1,9 +1,11 @@
 'use strict'
 
 import mongoose from 'mongoose';
-import config from 'config-lite';
+const config = require('config-lite')(__dirname)
 import chalk from 'chalk';
 
+console.log("zj: "+ config.port)
+console.log("zj: "+ config.url)
 mongoose.connect(config.url)
     .then(connection => {
         console.log('zj:  ' + 'Connected to MongoDB')
