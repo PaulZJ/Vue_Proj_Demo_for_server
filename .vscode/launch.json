@@ -8,18 +8,19 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/app.js"
+            "program": "${workspaceFolder}/index.js"
         },
         {
             "type": "node",
             "request": "launch",
             "name": "Launch via NPM",
+            "protocol": "inspector",
+            "cwd": "${workspaceFolder}",
             "runtimeExecutable": "npm",
             "runtimeArgs": [
-                "run-script",
-                "debug"
+                "run",
+                "dev"
             ],
-            "port": 9229
         },
         {
             "type": "node",
